@@ -3,7 +3,7 @@
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         AD7416ARZ
-        This code is designed to work with the AD7416ARZ_I2CADC I2C Mini Module available from ControlEverything.com.
+        This code is designed to work with the AD7416ARZ_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Temperature?sku=AD7416ARZ_I2CS#tabs-0-product_tabset-2
 */
 /**************************************************************************/
