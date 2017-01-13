@@ -3,7 +3,7 @@
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         CAT34TS02
-        This code is designed to work with the CAT34TS02_I2CADC I2C Mini Module available from ControlEverything.com.
+        This code is designed to work with the CAT34TS02_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/products
 */
 /**************************************************************************/
@@ -178,7 +178,7 @@ typedef enum
 
 typedef enum
 {
-    SHDN_ENABLE               = CAT34TS02_REG_CONFIG_SHDN_ENABLE,
+    SHDN_ENABLE             = CAT34TS02_REG_CONFIG_SHDN_ENABLE,
     SHDN_SHUT               = CAT34TS02_REG_CONFIG_SHDN_SHUT
 } catTShdn_t;
 
@@ -191,15 +191,15 @@ typedef enum
 
 typedef enum
 {
-    TALARM_UPDATE            = CAT34TS02_REG_CONFIG_TALARM_UPDATE,
-    TALARM_NOUPDATE          = CAT34TS02_REG_CONFIG_TALARM_NOUPDATE
+    TALARM_UPDATE           = CAT34TS02_REG_CONFIG_TALARM_UPDATE,
+    TALARM_NOUPDATE         = CAT34TS02_REG_CONFIG_TALARM_NOUPDATE
 } catTAlarm_t;
 
 
 typedef enum
 {
-    INTRCLEAR_SELF              = CAT34TS02_REG_CONFIG_INTRCLEAR_SELF,
-    INTRCLEAR_INTR              = CAT34TS02_REG_CONFIG_INTRCLEAR_INTR
+    INTRCLEAR_SELF          = CAT34TS02_REG_CONFIG_INTRCLEAR_SELF,
+    INTRCLEAR_INTR          = CAT34TS02_REG_CONFIG_INTRCLEAR_INTR
 } catIntrClear_t;
 
 typedef enum
@@ -216,20 +216,20 @@ typedef enum
 
 typedef enum
 {
-    EVENTCRIT_ALL          = CAT34TS02_REG_CONFIG_TCRITONLY_ALL,
-    EVENTCRIT_SELECT       = CAT34TS02_REG_CONFIG_TCRITONLY_SELECT
+    EVENTCRIT_ALL           = CAT34TS02_REG_CONFIG_TCRITONLY_ALL,
+    EVENTCRIT_SELECT        = CAT34TS02_REG_CONFIG_TCRITONLY_SELECT
 } catEventCrit_t;
 
 typedef enum
 {
-    EVENTPOL_LOW        = CAT34TS02_REG_CONFIG_EVENTPOL_LOW,
-    EVENTPOL_HIGH       = CAT34TS02_REG_CONFIG_EVENTPOL_HIGH
+    EVENTPOL_LOW            = CAT34TS02_REG_CONFIG_EVENTPOL_LOW,
+    EVENTPOL_HIGH           = CAT34TS02_REG_CONFIG_EVENTPOL_HIGH
 } catEventPol_t;
 
 typedef enum
 {
-    EVENTMOD_COMP       = CAT34TS02_REG_CONFIG_EVENTMOD_COMP,
-    EVENTMOD_INTR       = CAT34TS02_REG_CONFIG_EVENTMOD_INTR
+    EVENTMOD_COMP           = CAT34TS02_REG_CONFIG_EVENTMOD_COMP,
+    EVENTMOD_INTR           = CAT34TS02_REG_CONFIG_EVENTMOD_INTR
 } catEventMod_t;
 
 
