@@ -3,7 +3,7 @@
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         MAX44009
-        This code is designed to work with the MAX44009_I2CADC I2C Mini Module available from CONFIGEverything.com.
+        This code is designed to work with the MAX44009_I2CS I2C Mini Module available from CONFIGEverything.com.
         https://www.CONFIGeverything.com/products
 */
 /**************************************************************************/
