@@ -3,7 +3,7 @@
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         AT30TS74
-        This code is designed to work with the AT30TS74_I2CADC I2C Mini Module available from ControlEverything.com.
+        This code is designed to work with the AT30TS74_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/products
 */
 /**************************************************************************/
@@ -244,7 +244,7 @@ int16_t AT30TS74::Measure_Temp()
     // Set Shutdown Mode
     config |= at_shutdown;
     
-    // Write config register to the at
+    // Write config register to the device
     writeRegister(at_i2cAddress, AT30TS74_REG_POINTER_CONFIG, config);
     
     // Wait for the conversion to complete
