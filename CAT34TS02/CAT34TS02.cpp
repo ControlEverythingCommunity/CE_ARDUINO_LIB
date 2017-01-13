@@ -3,7 +3,7 @@
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         CAT34TS02
-        This code is designed to work with the CAT34TS02_I2CADC I2C Mini Module available from ControlEverything.com.
+        This code is designed to work with the CAT34TS02_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/products
  */
 /**************************************************************************/
@@ -440,7 +440,7 @@ int16_t CAT34TS02::Measure_Temp()
     // Set the Temperature Range
     capable |= cat_trange;
     
-    // Write config register to the device
+    // Write capable register to the device
     writeRegister(cat_i2cAddress, CAT34TS02_REG_POINTER_CAPABLE, capable);
     
     // Wait for the conversion to complete
@@ -461,7 +461,7 @@ int16_t CAT34TS02::Measure_Temp()
     // Set Thermal Sensor Shutdown Mode
     config |= cat_tshdn;
 
-    // Write config register to the cat
+    // Write config register to the device
     writeRegister(cat_i2cAddress, CAT34TS02_REG_POINTER_CONFIG, config);
 
     // Wait for the conversion to complete
