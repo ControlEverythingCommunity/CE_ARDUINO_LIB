@@ -2,23 +2,23 @@
 /*
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
-        MCP3425
-        This code is designed to work with the MCP3425_I2CADC I2C Mini Module available from ControlEverything.com.
-        https://www.controleverything.com/content/Analog-Digital-Converters?sku=MCP3425_I2CADC#tabs-0-product_tabset-2
+        MCP3426
+        This code is designed to work with the MCP3426_I2CADC I2C Mini Module available from ControlEverything.com.
+        https://www.controleverything.com/content/Analog-Digital-Converters?sku=MCP3426_I2CADC#tabs-0-product_tabset-2
 */
 /****************************************************************************/
 
-#include <MCP3425.h>
+#include <MCP3426.h>
 #include <Wire.h>
 
-MCP3425 MCP(0); // Declaration of MCP3425: A2, A1, A0 bits (000, 0x68)
+MCP3426 MCP(0); // Declaration of MCP3426: A2, A1, A0 bits (000, 0x68)
 
 void setup()
 {
     // Start serial communication and set baud rate = 9600
     Serial.begin(9600);
-    Serial.println("MCP3425 Analog to Digital Converter");
-    Serial.println("Getting ADC Readings from Channel 1");
+    Serial.println("MCP3426 Analog to Digital Converter");
+    Serial.println("Getting ADC Readings from Channel 2");
     Serial.println("        ************************************            ");
     Serial.println("        ");
     delay(500);
@@ -39,9 +39,9 @@ void loop()
     {
         long Raw_ADC;
 
-        // MCP3425 is configured to channel 1 with 14 bits resolution, one shot mode and gain defined to 1
+        // MCP3426 is configured to channel 2 with 16 bits resolution, one shot mode and gain defined to 1
         // This arrangement of the mentioned paarmeters can be changed as per convenience
-        MCP.SetConfiguration(1,14,0,1);
+        MCP.SetConfiguration(2,16,0,1);
 
         // Note that the library waits for a complete conversion
         Raw_ADC = MCP.readADC();
@@ -50,7 +50,7 @@ void loop()
         // raw_adc = raw_adc * LSB(62.5 µV)/PGA for PGA = 1;    // 16-bit Resolution
 
         // Output to the Screen
-        Serial.print("Digital value of Analog Input at Channel 1: ");
+        Serial.print("Digital value of Analog Input at Channel 2: ");
         Serial.println(Raw_ADC);
         Serial.println(" ");
         Serial.println("        ***************************        ");
@@ -58,7 +58,7 @@ void loop()
     }
     else
     {
-        Serial.println("MCP3425 Disconnected!");
+        Serial.println("MCP3426 Disconnected!");
         Serial.println(" ");
         Serial.println("        ************        ");
         Serial.println(" ");

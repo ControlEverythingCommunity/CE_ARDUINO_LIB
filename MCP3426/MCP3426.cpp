@@ -1,29 +1,29 @@
 /****************************************************************************
-/*
+ /*
         Distributed with a free-will license.
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
-        MCP3425
-        This code is designed to work with the MCP3425_I2CADC I2C Mini Module available from ControlEverything.com.
-        https://www.controleverything.com/content/Analog-Digital-Converters?sku=MCP3425_I2CADC#tabs-0-product_tabset-2
+        MCP3426
+        This code is designed to work with the MCP3426_I2CADC I2C Mini Module available from ControlEverything.com.
+        https://www.controleverything.com/content/Analog-Digital-Converters?sku=MCP3426_I2CADC#tabs-0-product_tabset-2
 */
 /****************************************************************************/
 
 #include <Wire.h>
-#include <MCP3425.h>
+#include <MCP3426.h>
 
 /**************************************************************************/
 /*
-        Instantiates a new MCP3425 class with appropriate properties
+        Instantiates a new MCP3426 class with appropriate properties
 */
 /***************************************************************************/
-MCP3425::MCP3425(uint8_t devAddress)
+MCP3426::MCP3426(uint8_t devAddress)
 {
     Wire.begin();
     devAddr = (uint8_t)(1101<<3);
     devAddr |= devAddress;
 }
 
-MCP3425::~MCP3425()
+MCP3426::~MCP3426()
 {
 }
 
@@ -32,7 +32,7 @@ MCP3425::~MCP3425()
         Verify the I2C connection and Sets up the Hardware
 */
 /***************************************************************************/
-bool MCP3425::testConnection()
+bool MCP3426::testConnection()
 {
     Wire.beginTransmission(devAddr);
     return (Wire.endTransmission() == 0);
@@ -47,7 +47,7 @@ bool MCP3425::testConnection()
         PGA: This configures the programmable gain amplifier
 */
 /**************************************************************************/
-void MCP3425::SetConfiguration(uint8_t channel, uint8_t resolution, bool mode, uint8_t PGA)
+void MCP3426::SetConfiguration(uint8_t channel, uint8_t resolution, bool mode, uint8_t PGA)
 {
     GAIN = PGA;
 
@@ -73,7 +73,7 @@ void MCP3425::SetConfiguration(uint8_t channel, uint8_t resolution, bool mode, u
     config |= int((SPS-12)/2);
     config = config<<2;
     // Setting the PGA Gain
-    config|=int(log(PGA)/log(2));
+    config |=int(log(PGA)/log(2));
     
     // Start a conversion using configuration settings
     Wire.beginTransmission(devAddr);
@@ -89,7 +89,7 @@ void MCP3425::SetConfiguration(uint8_t channel, uint8_t resolution, bool mode, u
         Check the adc conversion
 */
 /**************************************************************************/
-bool MCP3425::CheckConversion()
+bool MCP3426::CheckConversion()
 {
     uint8_t i = 0;
     no_of_bytes = 3;
@@ -112,12 +112,12 @@ bool MCP3425::CheckConversion()
         The resolution makes the ouptut in 12/14/16-bit
         LSB = (2 * VREF) / 2^N = (2 * 2.048 V) / 2^N
         Where:
-        N = Resolution, which is programmed in the Configuration Register: 12, 14, or 16.
+        N = Resolution, which is programmed in the Configuration Register: 12, 14, or 16
 */
 /**************************************************************************/
-long MCP3425::readADC()
+long MCP3426::readADC()
 {
-    
+
     raw_adc = 0;
 
     while(CheckConversion() == 1);
@@ -135,7 +135,7 @@ long MCP3425::readADC()
                 {
                     raw_adc = raw_adc - 4096;
                 }
-            
+        
                 // raw_adc = raw_adc * LSB(1 mV)/PGA for PGA = 1;
         
                 break;
@@ -165,7 +165,7 @@ long MCP3425::readADC()
                 {
                     raw_adc = raw_adc - 65536;
                 }
-
+            
                 // raw_adc = raw_adc * LSB(62.5 µV)/PGA for PGA = 1;
       
                 break;
