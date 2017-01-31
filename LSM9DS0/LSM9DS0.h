@@ -516,7 +516,7 @@ typedef enum
 typedef enum
 {
     MAG_CONTINUOUS                  = LSM9DS0_REG_ACCELMAG_CTRL_REG7_MD_CONTINUOUS,
-    MAG_SIBGLE                      = LSM9DS0_REG_ACCELMAG_CTRL_REG7_MD_SINGLE,
+    MAG_SINGLE                      = LSM9DS0_REG_ACCELMAG_CTRL_REG7_MD_SINGLE,
     MAG_POWER_DOWN                  = LSM9DS0_REG_ACCELMAG_CTRL_REG7_MD_PDOWN
     
 } lsmMagMode_t;
