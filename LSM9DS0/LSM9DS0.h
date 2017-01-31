@@ -148,15 +148,15 @@
     #define LSM9DS0_REG_GYRO_CTRL_REG1_PD_NORMAL            (0x08)  // Normal Mode or Sleep Mode
 
     #define LSM9DS0_REG_GYRO_CTRL_REG1_ZEN_MASK             (0x04)  // Gyroscope Z-axis Enable
-    #define LSM9DS0_REG_GYRO_CTRL_REG1_ZEN_DISABLE          (0x00)  // Gyroscope Z-axis Sisabled
+    #define LSM9DS0_REG_GYRO_CTRL_REG1_ZEN_DISABLE          (0x00)  // Gyroscope Z-axis Disabled
     #define LSM9DS0_REG_GYRO_CTRL_REG1_ZEN_ENABLE           (0x04)  // Gyroscope Z-axis Enabled
 
     #define LSM9DS0_REG_GYRO_CTRL_REG1_YEN_MASK             (0x02)  // Gyroscope Y-axis Enable
-    #define LSM9DS0_REG_GYRO_CTRL_REG1_YEN_DISABLE          (0x00)  // Gyroscope Y-axis Sisabled
+    #define LSM9DS0_REG_GYRO_CTRL_REG1_YEN_DISABLE          (0x00)  // Gyroscope Y-axis Disabled
     #define LSM9DS0_REG_GYRO_CTRL_REG1_YEN_ENABLE           (0x02)  // Gyroscope Y-axis Enabled
 
     #define LSM9DS0_REG_GYRO_CTRL_REG1_XEN_MASK             (0x01)  // Gyroscope X-axis Enable
-    #define LSM9DS0_REG_GYRO_CTRL_REG1_XEN_DISABLE          (0x00)  // Gyroscope X-axis Sisabled
+    #define LSM9DS0_REG_GYRO_CTRL_REG1_XEN_DISABLE          (0x00)  // Gyroscope X-axis Disabled
     #define LSM9DS0_REG_GYRO_CTRL_REG1_XEN_ENABLE           (0x01)  // Gyroscope X-axis Enabled
 
 /**************************************************************************
