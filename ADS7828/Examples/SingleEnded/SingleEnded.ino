@@ -5,6 +5,7 @@
         ADS7828
         This code is designed to work with the ADS7828_I2CADC I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Analog-Digital-Converters?sku=ADS7828_I2CADC#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
