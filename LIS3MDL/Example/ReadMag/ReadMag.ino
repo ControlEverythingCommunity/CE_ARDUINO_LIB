@@ -5,6 +5,7 @@
         LIS3MDL
         This code is designed to work with the LIS3MDL_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Magnetic-Sensor?sku=LIS3MDL_I2CS#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
