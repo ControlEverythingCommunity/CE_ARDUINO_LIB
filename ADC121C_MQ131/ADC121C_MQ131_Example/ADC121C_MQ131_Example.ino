@@ -5,7 +5,7 @@
         ADC121C_MQ131
         This code is designed to work with the ADC121C_I2CGAS_MQ131 I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/ozone-gas-sensor-12-bit
-        NT
+        NT.
 */
 /**************************************************************************/
 
