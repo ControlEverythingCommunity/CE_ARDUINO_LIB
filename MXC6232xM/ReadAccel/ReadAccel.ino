@@ -5,6 +5,7 @@
         MXC6232xM
         This code is designed to work with the MXC6232xM_I2CS I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/low-power-2g-dual-axis-accelerometer?variant=25687720907#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
