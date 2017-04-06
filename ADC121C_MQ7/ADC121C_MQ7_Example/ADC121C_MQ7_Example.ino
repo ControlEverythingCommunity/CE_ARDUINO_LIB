@@ -5,6 +5,7 @@
         ADC121C_MQ7
         This code is designed to work with the ADC121C_I2CGAS_MQ7 I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/carbon-monoxide-gas-sensor
+        NT
 */
 /**************************************************************************/
 
