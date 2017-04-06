@@ -5,6 +5,7 @@
         TSL2571
         This code is designed to work with the TSL2571_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Light?sku=TSL2571_I2CS#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
