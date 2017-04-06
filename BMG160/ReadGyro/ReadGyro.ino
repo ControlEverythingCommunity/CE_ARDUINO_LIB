@@ -5,6 +5,7 @@
         BMG160
         This code is designed to work with the BMG160_I2CS I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/3-axis-12-bit-8-bit-digital-Gyroscope
+        NT
 */
 /**************************************************************************/
 
