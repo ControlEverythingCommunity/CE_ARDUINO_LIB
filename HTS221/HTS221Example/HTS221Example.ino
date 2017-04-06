@@ -5,6 +5,7 @@
         HTS221
         This code is designed to work with the HTS221_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Humidity and Temperature Sensor?sku=HTS221_I2CS#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
