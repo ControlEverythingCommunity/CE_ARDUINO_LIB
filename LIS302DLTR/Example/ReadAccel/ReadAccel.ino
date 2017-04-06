@@ -5,6 +5,7 @@
         LIS302DLTR
         This code is designed to work with the LIS302DLTR_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Accelorometer?sku=LIS302DLTR_I2CS#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
