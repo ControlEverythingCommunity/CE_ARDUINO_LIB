@@ -5,6 +5,7 @@
         HIH6130
         This code is designed to work with the HIH6130_I2CS I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/temperature-compensated-humidity-and-temperature-sensor-4-rh-1-0-c?variant=25687736267#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
