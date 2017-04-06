@@ -5,6 +5,7 @@
         ADC121C_MQ6
         This code is designed to work with the ADC121C_I2CGAS_MQ6 I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/lpg-iso-butane-lpg-propane-lng-natural-gas-sensor
+        NT
 */
 /**************************************************************************/
 
