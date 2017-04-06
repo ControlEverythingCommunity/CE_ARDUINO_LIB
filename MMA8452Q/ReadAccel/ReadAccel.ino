@@ -5,6 +5,7 @@
         MMA8452Q
         This code is designed to work with the MMA8452Q_I2CS I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/products/3-axis-12-bit-8-bit-digital-accelerometer
+        NT
 */
 /**************************************************************************/
 
