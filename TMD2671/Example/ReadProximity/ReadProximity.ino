@@ -5,6 +5,7 @@
         TMD2671
         This code is designed to work with the TMD2671_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/content/Proximity?sku=TMD2671_I2CS#tabs-0-product_tabset-2
+        NT
 */
 /**************************************************************************/
 
