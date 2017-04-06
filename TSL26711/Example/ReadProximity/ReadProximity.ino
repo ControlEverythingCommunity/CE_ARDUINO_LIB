@@ -5,6 +5,7 @@
         TSL26711
         This code is designed to work with the TSL26711_I2CS I2C Mini Module available from ControlEverything.com.
         https://www.controleverything.com/products
+        NT
 */
 /**************************************************************************/
 
