@@ -5,6 +5,7 @@
         MPL115A2
         This code is designed to work with the MPL115A2_I2CS I2C Mini Module available from ControlEverything.com.
         https://shop.controleverything.com/collections/barometers/products/mpl115a2-digital-barometer-500-to-1150-mbar
+        NT
 */
 /**************************************************************************/
 
