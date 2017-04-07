@@ -92,8 +92,8 @@ static uint16_t readRegister(uint8_t i2cAddress)
 /**************************************************************************/
 void SHT25::getAddr_SHT25(uint8_t i2cAddress)
 {
-    si_i2cAddress = i2cAddress;
-    si_conversionDelay = SHT25_CONVERSIONDELAY;
+    sht_i2cAddress = i2cAddress;
+    sht_conversionDelay = SHT25_CONVERSIONDELAY;
 }
 
 /**************************************************************************/
@@ -119,7 +119,7 @@ bool SHT25::begin()
 void SHT25::softReset(void)
 {
     // Resets the SHT25 with the RESET command
-    writeRegister8(si_i2cAddress, SHT25_CMD_SOFT_RESET);
+    writeRegister8(sht_i2cAddress, SHT25_CMD_SOFT_RESET);
 }
 
 /**************************************************************************/
@@ -127,9 +127,9 @@ void SHT25::softReset(void)
         Sets the Temperature Measurement Mode
  */
 /**************************************************************************/
-void SHT25::setTempMode(siTempMode_t tempmode)
+void SHT25::setTempMode(shtTempMode_t tempmode)
 {
-    si_tempmode = tempmode;
+    sht_tempmode = tempmode;
 }
 
 /**************************************************************************/
@@ -137,9 +137,9 @@ void SHT25::setTempMode(siTempMode_t tempmode)
         Gets the Temperature Measurement Mode
  */
 /**************************************************************************/
-siTempMode_t SHT25::getTempMode()
+shtTempMode_t SHT25::getTempMode()
 {
-    return si_tempmode;
+    return sht_tempmode;
 }
 
 /**************************************************************************/
@@ -147,9 +147,9 @@ siTempMode_t SHT25::getTempMode()
         Sets the Humidity Measurement Mode
 */
 /**************************************************************************/
-void SHT25::setHumidityMode(siHumidityMode_t humiditymode)
+void SHT25::setHumidityMode(shtHumidityMode_t humiditymode)
 {
-    si_humiditymode = humiditymode;
+    sht_humiditymode = humiditymode;
 }
 
 /**************************************************************************/
@@ -157,9 +157,9 @@ void SHT25::setHumidityMode(siHumidityMode_t humiditymode)
         Gets the Humidity Measurement Mode
 */
 /**************************************************************************/
-siHumidityMode_t SHT25::getHumidityMode()
+shtHumidityMode_t SHT25::getHumidityMode()
 {
-    return si_humiditymode;
+    return sht_humiditymode;
 }
 
 /**************************************************************************/
@@ -167,9 +167,9 @@ siHumidityMode_t SHT25::getHumidityMode()
         Sets the Measurement Resolution
 */
 /**************************************************************************/
-void SHT25::setResolution(siResolution_t resolution)
+void SHT25::setResolution(shtResolution_t resolution)
 {
-    si_resolution = resolution;
+    sht_resolution = resolution;
 }
 
 /**************************************************************************/
@@ -177,9 +177,9 @@ void SHT25::setResolution(siResolution_t resolution)
         Gets the Measurement Resolution
 */
 /**************************************************************************/
-siResolution_t SHT25::getResolution()
+shtResolution_t SHT25::getResolution()
 {
-    return si_resolution;
+    return sht_resolution;
 }
 
 /**************************************************************************/
@@ -187,9 +187,9 @@ siResolution_t SHT25::getResolution()
         Sets the VDD Status
 */
 /**************************************************************************/
-void SHT25::setVoltage(siVoltage_t voltage)
+void SHT25::setVoltage(shtVoltage_t voltage)
 {
-    si_voltage = voltage;
+    sht_voltage = voltage;
 }
 
 /**************************************************************************/
@@ -197,9 +197,9 @@ void SHT25::setVoltage(siVoltage_t voltage)
         Gets the VDD Status
 */
 /**************************************************************************/
-siVoltage_t SHT25::getVoltage()
+shtVoltage_t SHT25::getVoltage()
 {
-    return si_voltage;
+    return sht_voltage;
 }
 
 /**************************************************************************/
@@ -207,9 +207,9 @@ siVoltage_t SHT25::getVoltage()
         Sets the Heater Status
 */
 /**************************************************************************/
-void SHT25::setHeaterStatus(siHeaterStatus_t heaterstatus)
+void SHT25::setHeaterStatus(shtHeaterStatus_t heaterstatus)
 {
-    si_heaterstatus = heaterstatus;
+    sht_heaterstatus = heaterstatus;
 }
 
 /**************************************************************************/
@@ -217,9 +217,9 @@ void SHT25::setHeaterStatus(siHeaterStatus_t heaterstatus)
         Gets the Heater Status
 */
 /**************************************************************************/
-siHeaterStatus_t SHT25::getHeaterStatus()
+shtHeaterStatus_t SHT25::getHeaterStatus()
 {
-    return si_heaterstatus;
+    return sht_heaterstatus;
 }
 
 /**************************************************************************/
@@ -227,9 +227,9 @@ siHeaterStatus_t SHT25::getHeaterStatus()
         Sets the OTP Reload
 */
 /**************************************************************************/
-void SHT25::setOTPStatus(siOTPStatus_t otpstatus)
+void SHT25::setOTPStatus(shtOTPStatus_t otpstatus)
 {
-    si_otpstatus = otpstatus;
+    sht_otpstatus = otpstatus;
 }
 
 /**************************************************************************/
@@ -237,9 +237,9 @@ void SHT25::setOTPStatus(siOTPStatus_t otpstatus)
         Gets the OTP Reload
 */
 /**************************************************************************/
-siOTPStatus_t SHT25::getOTPStatus()
+shtOTPStatus_t SHT25::getOTPStatus()
 {
-    return si_otpstatus;
+    return sht_otpstatus;
 }
 
 /**************************************************************************/
@@ -252,35 +252,35 @@ siOTPStatus_t SHT25::getOTPStatus()
 float SHT25::Measure_Temperature()
 {
     // Set Measurement Resolution
-    uint8_t tempControl = si_resolution;
+    uint8_t tempControl = sht_resolution;
     
     // Set VDD (Voltage Status)
-    tempControl |= si_voltage;
+    tempControl |= sht_voltage;
     
     // Set On-Chip Heater Status
-    tempControl |= si_heaterstatus;
+    tempControl |= sht_heaterstatus;
     
     // Set OTP Reload
-    tempControl |= si_otpstatus;
+    tempControl |= sht_otpstatus;
 
     // Sending Command to the User Register 1 for SHT25
-    writeRegister(si_i2cAddress, SHT25_CMD_WRITE_USER, tempControl);
+    writeRegister(sht_i2cAddress, SHT25_CMD_WRITE_USER, tempControl);
     
     // Wait for the conversion to complete
-    delay(si_conversionDelay);
+    delay(sht_conversionDelay);
     
     // Set the Temperature Measurement Mode
-    uint8_t tempMode = si_tempmode;
+    uint8_t tempMode = sht_tempmode;
     
     // Sending Command for Temperature Measurement Mode
     uint16_t rawTemperature;
     float temperature;
-    writeRegister8(si_i2cAddress, tempMode);
-    delay(si_conversionDelay);
+    writeRegister8(sht_i2cAddress, tempMode);
+    delay(sht_conversionDelay);
     
     // Read the Conversion Results
     // 16-bit unsigned results for the SHT25
-    rawTemperature = readRegister(si_i2cAddress);
+    rawTemperature = readRegister(sht_i2cAddress);
     temperature = (172.72 * rawTemperature)/65536.0 - 46.85;
     
     return (float)temperature;
@@ -296,32 +296,32 @@ float SHT25::Measure_Temperature()
 float SHT25::Measure_Humidity()
 {
     // Set Measurement Resolution
-    uint8_t tempControl = si_resolution;
+    uint8_t tempControl = sht_resolution;
     
     // Set VDD (Voltage Status)
-    tempControl |= si_voltage;
+    tempControl |= sht_voltage;
     
     // Set On-Chip Heater Status
-    tempControl |= si_heaterstatus;
+    tempControl |= sht_heaterstatus;
     
     // Sending command to the User Register 1 for SHT25
-    writeRegister(si_i2cAddress, SHT25_CMD_WRITE_USER, tempControl);
+    writeRegister(sht_i2cAddress, SHT25_CMD_WRITE_USER, tempControl);
     
     // Wait for the conversion to complete
-    delay(si_conversionDelay);
+    delay(sht_conversionDelay);
     
     // Set the Humidity Measurement Mode
-    uint8_t humidityMode = si_humiditymode;
+    uint8_t humidityMode = sht_humiditymode;
     
     // Sending command for Humidity Measurement Mode
     uint16_t rawHumidity;
     float humidity;
-    writeRegister8(si_i2cAddress, humidityMode);
-    delay(si_conversionDelay);
+    writeRegister8(sht_i2cAddress, humidityMode);
+    delay(sht_conversionDelay);
     
     // Read the conversion results
     // 16-bit unsigned results for the SHT25
-    rawHumidity = readRegister(si_i2cAddress);
+    rawHumidity = readRegister(sht_i2cAddress);
     humidity = (125.0 * rawHumidity)/65536.0 - 6;
 
     return (float)humidity;
