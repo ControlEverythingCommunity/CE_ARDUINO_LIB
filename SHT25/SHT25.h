@@ -69,13 +69,13 @@ typedef enum
 {
     TEMP_HOLD           = SHT25_CMD_TEMP_HOLD,
     TEMP_NO_HOLD        = SHT25_CMD_TEMP_NO_HOLD
-} siTempMode_t;
+} shtTempMode_t;
 
 typedef enum
 {
     HUMIDITY_HOLD       = SHT25_CMD_RH_HOLD,
     HUMIDITY_NO_HOLD    = SHT25_CMD_RH_NO_HOLD
-} siHumidityMode_t;
+} shtHumidityMode_t;
 
 typedef enum
 {
@@ -83,43 +83,43 @@ typedef enum
     RESOLUTION_1        = SHT25_USER_RES_RH8_T12,
     RESOLUTION_2        = SHT25_USER_RES_RH10_T13,
     RESOLUTION_4        = SHT25_USER_RES_RH11_T11
-} siResolution_t;
+} shtResolution_t;
 
 typedef enum
 {
     VOLTAGE_OK          = SHT25_USER_VDDS_OK,
     VOLTAGE_LOW         = SHT25_USER_VDDS_LOW
-} siVoltage_t;
+} shtVoltage_t;
 
 typedef enum
 {
     HEATER_ENABLE       = SHT25_USER_HTRE_ENABLE,
     HEATER_DISABLE      = SHT25_USER_HTRE_DISABLE
-} siHeaterStatus_t;
+} shtHeaterStatus_t;
 
 typedef enum
 {
     OTP_ENABLE          = SHT25_USER_OTP_ENABLE,
     OTP_DISABLE         = SHT25_USER_OTP_DISABLE
-} siOTPStatus_t;
+} shtOTPStatus_t;
 
 
 class SHT25
 {
     protected:
         // Instance-specific properties
-        uint8_t si_conversionDelay;
-        siTempMode_t si_tempmode;
-        siHumidityMode_t si_humiditymode;
-        siResolution_t si_resolution;
-        siVoltage_t si_voltage;
-        siHeaterStatus_t si_heaterstatus;
-        siOTPStatus_t si_otpstatus;
+        uint8_t sht_conversionDelay;
+        shtTempMode_t sht_tempmode;
+        shtHumidityMode_t sht_humiditymode;
+        shtResolution_t sht_resolution;
+        shtVoltage_t sht_voltage;
+        shtHeaterStatus_t sht_heaterstatus;
+        shtOTPStatus_t sht_otpstatus;
 
     
     public:
-        uint8_t si_i2cAddress;
-        // Initialize SI7006 library with device address
+        uint8_t sht_i2cAddress;
+        // Initialize SHT25 library with device address
         // Always returns true
         void getAddr_SHT25(uint8_t i2cAddress);
         bool begin(void);
@@ -127,18 +127,18 @@ class SHT25
         float Measure_Humidity(void);
         void softReset(void);
         uint8_t CRC8(const uint8_t *data, int len);
-        void setTempMode(siTempMode_t tempmode);
-        siTempMode_t getTempMode(void);
-        void setHumidityMode(siHumidityMode_t tempmode);
-        siHumidityMode_t getHumidityMode(void);
-        void setResolution(siResolution_t resolution);
-        siResolution_t getResolution(void);
-        void setVoltage(siVoltage_t voltage);
-        siVoltage_t getVoltage(void);
-        void setHeaterStatus(siHeaterStatus_t heaterstatus);
-        siHeaterStatus_t getHeaterStatus(void);
-        void setOTPStatus(siOTPStatus_t otpstatus);
-        siOTPStatus_t getOTPStatus(void);
+        void setTempMode(shtTempMode_t tempmode);
+        shtTempMode_t getTempMode(void);
+        void setHumidityMode(shtHumidityMode_t tempmode);
+        shtHumidityMode_t getHumidityMode(void);
+        void setResolution(shtResolution_t resolution);
+        shtResolution_t getResolution(void);
+        void setVoltage(shtVoltage_t voltage);
+        shtVoltage_t getVoltage(void);
+        void setHeaterStatus(shtHeaterStatus_t heaterstatus);
+        shtHeaterStatus_t getHeaterStatus(void);
+        void setOTPStatus(shtOTPStatus_t otpstatus);
+        shtOTPStatus_t getOTPStatus(void);
     
     private:
 };
