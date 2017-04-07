@@ -153,7 +153,7 @@ class SI7021
     
     public:
         uint8_t si_i2cAddress;
-        // Initialize SI7006 library with device address
+        // Initialize SI7021 library with device address
         // Always returns true
         void getAddr_SI7021(uint8_t i2cAddress);
         void begin(void);
