@@ -112,7 +112,6 @@ typedef enum
     
 } ADC121C_MQ5AlertFlag_t;
 
-
 typedef enum
 {
     ALERT_PIN_DISABLE           = ADC121C_MQ5_REG_CONFIG_ALERT_PIN_DIS,
@@ -126,7 +125,6 @@ typedef enum
     POLARITY_HIGH               = ADC121C_MQ5_REG_CONFIG_POLARITY_HIGH
     
 } ADC121C_MQ5Polarity_t;
-
 
 
 class ADC121C_MQ5
@@ -192,7 +190,5 @@ class ADC121C_MQ5
         float Measure_RL()  { return 20.0; }
         // Clean Air Ratio
         float Measure_RoInCleanAir()  { return 6.5; }
-
-
 
 };
