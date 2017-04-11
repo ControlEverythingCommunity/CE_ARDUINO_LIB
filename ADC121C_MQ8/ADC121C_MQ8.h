@@ -4,7 +4,7 @@
         Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
         ADC121C_MQ8
         This code is designed to work with the ADC121C_I2CGAS_MQ8 I2C Mini Module available from ControlEverything.com.
-       https://shop.controleverything.com/products/hydrogen-gas-sensor
+        https://shop.controleverything.com/products/hydrogen-gas-sensor
 */
 /**************************************************************************/
 
@@ -112,7 +112,6 @@ typedef enum
     
 } ADC121C_MQ8AlertFlag_t;
 
-
 typedef enum
 {
     ALERT_PIN_DISABLE           = ADC121C_MQ8_REG_CONFIG_ALERT_PIN_DIS,
@@ -126,7 +125,6 @@ typedef enum
     POLARITY_HIGH               = ADC121C_MQ8_REG_CONFIG_POLARITY_HIGH
     
 } ADC121C_MQ8Polarity_t;
-
 
 
 class ADC121C_MQ8
@@ -191,7 +189,5 @@ class ADC121C_MQ8
         float Measure_RL()  { return 10.0; }
         // Clean Air Ratio
         float Measure_RoInCleanAir()  { return 70.0; }
-
-
 
 };
