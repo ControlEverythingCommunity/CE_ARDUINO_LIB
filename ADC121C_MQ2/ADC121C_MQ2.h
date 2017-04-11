@@ -112,7 +112,6 @@ typedef enum
     
 } ADC121C_MQ2AlertFlag_t;
 
-
 typedef enum
 {
     ALERT_PIN_DISABLE           = ADC121C_MQ2_REG_CONFIG_ALERT_PIN_DIS,
@@ -192,7 +191,5 @@ class ADC121C_MQ2
         float Measure_RL()  { return 5.0; }
         // Clean Air Ratio
         float Measure_RoInCleanAir()  { return 9.83; }
-
-
-
+        
 };
