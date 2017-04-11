@@ -94,7 +94,7 @@ void loop(void)
 
         Serial.println(mq2.Measure_RatioRsRo());
         Serial.print("Concentration  of LPG is: ");
-        float ppmLPG = mq2.Measure_LPG(-0.57, 2.30);
+        float ppmLPG = mq2.Measure_LPG(-0.57, 2.3);
         Serial.print(ppmLPG, 3);
         Serial.println(" ppm ");
         delay(500);
