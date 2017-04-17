@@ -146,7 +146,7 @@ class ADC121C_ACS714
         void getAddr_ADC121C_ACS714(uint8_t i2cAddress);
         void begin(void);
         uint16_t Measure_Voltage(void);
-        uint16_t Measure_Current(void);
+        float Measure_Current(void);
         bool getAlertStatus(void);
         bool alertLowTriggered();
         bool alertHighTriggered();
