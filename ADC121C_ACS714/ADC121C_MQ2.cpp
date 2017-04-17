@@ -432,7 +432,7 @@ uint16_t ADC121C_ACS714::Measure_Voltage()
         Gets the Current Value
  */
 /**************************************************************************/
-uint16_t ADC121C_ACS714::Measure_Current()
+float ADC121C_ACS714::Measure_Current()
 {
     /*
      ACS714-5.0 A Current Sensor
@@ -452,7 +452,7 @@ uint16_t ADC121C_ACS714::Measure_Current()
         current += (VCC / (SENSITIVITY * ADC_RESOLUTION)) * (Measure_Voltage() - (ADC_RESOLUTION / 2));
         delay(ADC121C_ACS714_SAMPLE_INTERVAL);
     }
-    current /= 100;
+    current = current / 100.0;
 }
 
 
