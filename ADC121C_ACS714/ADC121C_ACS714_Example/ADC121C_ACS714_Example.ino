@@ -71,13 +71,13 @@ void loop(void)
     error = Wire.endTransmission();
     if (error == 0)
     {
-        uint16_t result;
+        float result;
 
         Serial.println("Getting Current Readings from ADC121C_ACS714");
         Serial.println(" ");
         result = acs714.Measure_Current();
         Serial.print("Instantaneous Current Value: ");
-        Serial.print(result, 6);
+        Serial.print(result, 4);
         Serial.println(" A");
         Serial.println(" ");
         Serial.println("        ***************************        ");
