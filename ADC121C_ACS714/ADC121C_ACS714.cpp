@@ -451,8 +451,9 @@ float ADC121C_ACS714::Measure_Current()
     {
         current += (VCC / (SENSITIVITY * ADC_RESOLUTION)) * (Measure_Voltage() - (ADC_RESOLUTION / 2));
         delay(ADC121C_ACS714_SAMPLE_INTERVAL);
+            current = current / 100.0;
     }
-    current = current / 100.0;
+    return current;
 }
 
 
