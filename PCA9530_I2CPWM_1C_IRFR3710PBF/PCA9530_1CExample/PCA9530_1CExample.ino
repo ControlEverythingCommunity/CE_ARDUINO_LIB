@@ -48,12 +48,12 @@ void loop(void)
 
         // Set up for Sensor for LED Selection
         // Sets the LS0 LED Select Registers, LS0-LED selector
-        // setLEDSelector(uint8_t LED1, uint8_t LED0)
-        pca.setLEDSelector(PCA9530_1C_REG_LS0_PWM0, PCA9530_1C_REG_LS0_PWM0);
+        // setLEDSelector(uint8_t LED0)
+        pca.setLEDSelector(PCA9530_1C_REG_LS0_PWM0);
         delay(500);
 
         // Output Data to Screen
-        Serial.println("All LED's blinks at PWM0 Rate");
+        Serial.println("The LED blinks at PWM0 Rate");
         Serial.println(" ");
         Serial.println("        ***************************        ");
         Serial.println(" ");

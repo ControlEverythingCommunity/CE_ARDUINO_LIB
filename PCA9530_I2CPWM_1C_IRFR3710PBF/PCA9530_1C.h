@@ -59,7 +59,7 @@ class PCA9530_1C
         void setPWM0(uint8_t dutycycle);
         void setFreqPSC1(uint8_t period);
         void setPWM1(uint8_t dutycycle);
-        void setLEDSelector(uint8_t LED1, uint8_t LED0);
+        void setLEDSelector(uint8_t LED0);
     
     private:
 };

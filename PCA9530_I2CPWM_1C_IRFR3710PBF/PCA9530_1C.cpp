@@ -162,12 +162,12 @@ void PCA9530_1C::setPWM1(uint8_t dutycycle)
         For the particular LED output user have to shift configuration according to the given below data
         LS0-LED selector
         7:6		1111*		Reserved
-        3:2		00*			LED1 Selected
+        3:2		11*			Reserved
         1:0		00*			LED0 Selected
 */
 /**************************************************************************/
-void PCA9530_1C::setLEDSelector(uint8_t LED1, uint8_t LED0)
+void PCA9530_1C::setLEDSelector(uint8_t LED0)
 {
-    writeRegister(pca_i2cAddress, PCA9530_1C_REG_LS0, LED1 << 2 | LED0);
+    writeRegister(pca_i2cAddress, PCA9530_1C_REG_LS0, LED0);
     delay(pca_conversionDelay);
 }
