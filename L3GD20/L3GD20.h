@@ -62,20 +62,20 @@
     GYROSCOPE CONTROL REGISTER 1 DESCRIPTION
 **************************************************************************/
     #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_MASK         (0xF0)      // Output Data Rate and Bandwidth Selection
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_95_12_5      (0x00)      // ODR (Hz): 100, Cutoff: 12.5
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_95_25        (0x30)      // ODR (Hz): 100, Cutoff: 25
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_12_5     (0x40)      // ODR (Hz): 200, Cutoff: 12.5
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_25       (0x50)      // ODR (Hz): 200, Cutoff: 25
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_50       (0x60)      // ODR (Hz): 200, Cutoff: 50
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_70       (0x70)      // ODR (Hz): 200, Cutoff: 70
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_20       (0x80)      // ODR (Hz): 400, Cutoff: 20
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_25       (0x90)      // ODR (Hz): 400, Cutoff: 25
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_50       (0xA0)      // ODR (Hz): 400, Cutoff: 50
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_100      (0xB0)      // ODR (Hz): 400, Cutoff: 100
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_30       (0xC0)      // ODR (Hz): 800, Cutoff: 30
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_35       (0xD0)      // ODR (Hz): 800, Cutoff: 35
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_50       (0xE0)      // ODR (Hz): 800, Cutoff: 50
-    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_100      (0xF0)      // ODR (Hz): 800, Cutoff: 100
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_95_12_5      (0x00)      // ODR (Hz): 95, Cutoff: 12.5
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_95_25        (0x30)      // ODR (Hz): 95, Cutoff: 25
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_12_5     (0x40)      // ODR (Hz): 190, Cutoff: 12.5
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_25       (0x50)      // ODR (Hz): 190, Cutoff: 25
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_50       (0x60)      // ODR (Hz): 190, Cutoff: 50
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_190_70       (0x70)      // ODR (Hz): 190, Cutoff: 70
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_20       (0x80)      // ODR (Hz): 380, Cutoff: 20
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_25       (0x90)      // ODR (Hz): 380, Cutoff: 25
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_50       (0xA0)      // ODR (Hz): 380, Cutoff: 50
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_380_100      (0xB0)      // ODR (Hz): 280, Cutoff: 100
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_30       (0xC0)      // ODR (Hz): 760, Cutoff: 30
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_35       (0xD0)      // ODR (Hz): 760, Cutoff: 35
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_50       (0xE0)      // ODR (Hz): 760, Cutoff: 50
+    #define L3GD20_REG_GYRO_CTRL_REG1_DRBW_760_100      (0xF0)      // ODR (Hz): 760, Cutoff: 100
 
     #define L3GD20_REG_GYRO_CTRL_REG1_PD_MASK           (0x08)      // Power-Down Mode Enable
     #define L3GD20_REG_GYRO_CTRL_REG1_PD_DOWN           (0x00)      // Power-Down Mode
