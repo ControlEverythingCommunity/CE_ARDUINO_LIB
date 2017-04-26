@@ -33,20 +33,20 @@ void setup(void)
     // These functions can be modified and added here so that the parameters can be altered as per requirement
     */
 
-    l3g.setGyroDataRate(GYRO_DATARATE_95_12_5);      // ODR (Hz): 100, Cutoff: 12.5
-    // l3g.setGyroDataRate(GYRO_DATARATE_95_25);     // ODR (Hz): 100, Cutoff: 25
-    // l3g.setGyroDataRate(GYRO_DATARATE_190_12_5);  // ODR (Hz): 200, Cutoff: 12.5
-    // l3g.setGyroDataRate(GYRO_DATARATE_190_25);    // ODR (Hz): 200, Cutoff: 25
-    // l3g.setGyroDataRate(GYRO_DATARATE_190_50);    // ODR (Hz): 200, Cutoff: 50
-    // l3g.setGyroDataRate(GYRO_DATARATE_190_70);    // ODR (Hz): 200, Cutoff: 70
-    // l3g.setGyroDataRate(GYRO_DATARATE_380_20);    // ODR (Hz): 400, Cutoff: 20
-    // l3g.setGyroDataRate(GYRO_DATARATE_380_25);    // ODR (Hz): 400, Cutoff: 25
-    // l3g.setGyroDataRate(GYRO_DATARATE_380_50);    // ODR (Hz): 400, Cutoff: 50
-    // l3g.setGyroDataRate(GYRO_DATARATE_380_100);   // ODR (Hz): 400, Cutoff: 100
-    // l3g.setGyroDataRate(GYRO_DATARATE_760_30);    // ODR (Hz): 800, Cutoff: 30
-    // l3g.setGyroDataRate(GYRO_DATARATE_760_35);    // ODR (Hz): 800, Cutoff: 35
-    // l3g.setGyroDataRate(GYRO_DATARATE_760_50);    // ODR (Hz): 800, Cutoff: 50
-    // l3g.setGyroDataRate(GYRO_DATARATE_760_100);   // ODR (Hz): 800, Cutoff: 100
+    l3g.setGyroDataRate(GYRO_DATARATE_95_12_5);      // ODR (Hz): 95, Cutoff: 12.5
+    // l3g.setGyroDataRate(GYRO_DATARATE_95_25);     // ODR (Hz): 95, Cutoff: 25
+    // l3g.setGyroDataRate(GYRO_DATARATE_190_12_5);  // ODR (Hz): 190, Cutoff: 12.5
+    // l3g.setGyroDataRate(GYRO_DATARATE_190_25);    // ODR (Hz): 190, Cutoff: 25
+    // l3g.setGyroDataRate(GYRO_DATARATE_190_50);    // ODR (Hz): 190, Cutoff: 50
+    // l3g.setGyroDataRate(GYRO_DATARATE_190_70);    // ODR (Hz): 190, Cutoff: 70
+    // l3g.setGyroDataRate(GYRO_DATARATE_380_20);    // ODR (Hz): 380, Cutoff: 20
+    // l3g.setGyroDataRate(GYRO_DATARATE_380_25);    // ODR (Hz): 380, Cutoff: 25
+    // l3g.setGyroDataRate(GYRO_DATARATE_380_50);    // ODR (Hz): 380, Cutoff: 50
+    // l3g.setGyroDataRate(GYRO_DATARATE_380_100);   // ODR (Hz): 380, Cutoff: 100
+    // l3g.setGyroDataRate(GYRO_DATARATE_760_30);    // ODR (Hz): 760, Cutoff: 30
+    // l3g.setGyroDataRate(GYRO_DATARATE_760_35);    // ODR (Hz): 760, Cutoff: 35
+    // l3g.setGyroDataRate(GYRO_DATARATE_760_50);    // ODR (Hz): 760, Cutoff: 50
+    // l3g.setGyroDataRate(GYRO_DATARATE_760_100);   // ODR (Hz): 760, Cutoff: 100
 
     l3g.setGyroScale(GYRO_SCALE_2000DPS);            // 2000 dps
     // l3g.setGyroScale(GYRO_SCALE_250DPS);          // 250 dps
