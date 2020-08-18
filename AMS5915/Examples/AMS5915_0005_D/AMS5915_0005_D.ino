@@ -40,7 +40,7 @@ void loop(void)
     if (error == 0)
     {
         ams.Measure_PressureAndTemperature(AMS5915_0005_D_P_MIN, AMS5915_0005_D_P_MAX);
-        float cTemp, fTemp, pressure, kPa, hg;
+        float cTemp, fTemp, pressure, kPa,PSI, hg;
 
         Serial.println("Getting Readings from AMS5915_0005-D");
         Serial.println(" ");
